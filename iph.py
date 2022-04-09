@@ -4,7 +4,7 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html, Input, Output, State,dcc
 import joblib
-ss = joblib.load('E:/DIAPRE/文章最终结果数据/Scaler')
+ss = joblib.load('Scaler')
 from tensorflow.keras.models import load_model
 from keras import backend
 import tensorflow as tf
@@ -12,7 +12,7 @@ global graph,model,sess
 graph = tf.get_default_graph()#为了清楚缓存
 sess=backend.get_session()
 
-model2 = load_model('E:/DIAPRE/文章最终结果数据/modelann.h5')
+model2 = load_model('modelann.h5')
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.FLATLY],suppress_callback_exceptions=True)
 # 2. Create a Dash app instance
 
