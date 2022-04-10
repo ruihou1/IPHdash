@@ -632,7 +632,7 @@ def input_to_output2(n_clicks1,age1, height1, weight1, hr1, sbp1, fpg1, hba1c1, 
         test2 = pd.DataFrame(test1, columns=test.columns)
         with sess.as_default():
             with graph.as_default():
-                testreslut = model2.predict(test2。values)
+                testreslut = model2.predict(test2.values)
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
                     return u"单纯餐后血糖升高概率:【{:.4f}】       建议进行进一步检测".format(re)
