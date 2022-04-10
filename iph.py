@@ -466,7 +466,17 @@ dbc.Row(
 @app.callback(
     Output(component_id='output-value2', component_property='children'),
     [Input('Caculate1', 'n_clicks'),
-     Input('age', 'value')],
+     Input('age', 'value'),
+     Input('height', 'value'),
+     Input('weight', 'value'),
+     Input('hr', 'value'),
+     Input('sbp', 'value'),
+     Input('fpg', 'value'),
+     Input('hba1c','value'),
+     Input('alt', 'value'),
+     Input('tg', 'value'),
+     Input('hdl', 'value'),
+     Input('ldl', 'value')],
     prevent_initial_call=True )
 
 
