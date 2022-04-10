@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 from keras import backend
 import tensorflow as tf
 global graph,model,sess
-graph = tf.get_default_graph()#为了清楚缓存
+graph = tf.compat.v1.get_default_graph()#为了清楚缓存
 sess=backend.get_session()
 
 model2 = load_model('modelann.h5')
