@@ -537,11 +537,11 @@ def input_to_output(n_clicks,age, height, weight, hr, sbp, fpg, hba1c, alt, tg, 
              "HDL": hdl
              }  # 将列表a，b转换成字典
         test = pd.DataFrame(c, index=[0])  # 将字典转换成为数据框
-        test1 = ss.transform(test)
+        test1 = ss.transform(test.values)
         test2 = pd.DataFrame(test1, columns=test.columns)
         with sess.as_default():
             with graph.as_default():
-                testreslut = model2.predict(test2)
+                testreslut = model2.predict(test2.values)
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
                     return u"Probility of IPH:【{:.4f}】       Suggest:please test".format(re)
@@ -628,11 +628,11 @@ def input_to_output2(n_clicks1,age1, height1, weight1, hr1, sbp1, fpg1, hba1c1, 
              "HDL": hdl
              }  # 将列表a，b转换成字典
         test = pd.DataFrame(c, index=[0])  # 将字典转换成为数据框
-        test1 = ss.transform(test)
+        test1 = ss.transform(test.values)
         test2 = pd.DataFrame(test1, columns=test.columns)
         with sess.as_default():
             with graph.as_default():
-                testreslut = model2.predict(test2)
+                testreslut = model2.predict(test2。values)
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
                     return u"单纯餐后血糖升高概率:【{:.4f}】       建议进行进一步检测".format(re)
