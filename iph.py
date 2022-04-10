@@ -544,7 +544,7 @@ def input_to_output(n_clicks,age, height, weight, hr, sbp, fpg, hba1c, alt, tg, 
         test2 = pd.DataFrame(test1, columns=test.columns)
         with sess.as_default():
             with graph.as_default():
-                testreslut = model2.predict(test2.iloc[0])
+                testreslut = model2.predict(test2.iloc[0,])
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
                     return u"【{:.4f}】       suggest:please test".format(re)
