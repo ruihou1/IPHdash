@@ -470,9 +470,76 @@ dbc.Row(
     prevent_initial_call=True )
 
 
-def input_to_output(n_clicks,age):
+def input_to_output(n_clicks,age, height, weight, hr, sbp, fpg, hba1c, alt, tg, hdl, ldl):
     if n_clicks:
-        return u"Probility of IPH:【{:.4f}】       Suggest:please test".format(age)
+        if age is None:
+            age = 57.7
+        else:
+            age = age
+        if height is None:
+            height = 159
+        else:
+            height = height
+        if weight is None:
+            weight = 62.1
+        else:
+            weight = weight
+        if hr is None:
+            hr = 79.1
+        else:
+            hr = hr
+        if sbp is None:
+            sbp = 130
+        else:
+            sbp = sbp
+        if fpg is None:
+            fpg = 5.54
+        else:
+            fpg = fpg
+        if hba1c is None:
+            hba1c = 5.79
+        else:
+            hba1c = hba1c
+        if alt is None:
+            alt = 16.9
+        else:
+            alt = alt
+        if tg is None:
+            tg = 5.02
+        else:
+            tg = tg
+        if ldl is None:
+            ldl = 2.95
+        else:
+            ldl = ldl
+        if hdl is None:
+            hdl = 1.33
+        else:
+            hdl = hdl
+        bmi = (weight) / ((height / 100) ** 2)
+        # 预测数据  字典转成数据框
+        c = {"Glu0": fpg,
+             "HbAlc": hba1c,
+             "bmi": bmi,
+             "age": age,
+             "hr": hr,
+             "ALT": alt,
+             "TG": tg,
+             "LDL": ldl,
+             "sbp": sbp,
+             "HDL": hdl
+             }  # 将列表a，b转换成字典
+        test = pd.DataFrame(c, index=[0])  # 将字典转换成为数据框
+        test1 = ss.transform(test)
+        test2 = pd.DataFrame(test1, columns=test.columns)
+        with sess.as_default():
+            with graph.as_default():
+                testreslut = model2.predict(test2.value)
+                re = round(testreslut[0, 0], 4)
+                if re>=0.07:
+                    return u"【{:.4f}】       suggest:please test".format(re)
+                else:
+                    return u"【{:.4f}】 ".format(re)
              
 
 
