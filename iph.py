@@ -14,6 +14,7 @@ sess=backend.get_session()
 
 model2 = load_model('model.h5')
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.FLATLY],suppress_callback_exceptions=True)
+server = app.server
 # 2. Create a Dash app instance
 
 
