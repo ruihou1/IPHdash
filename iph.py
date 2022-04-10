@@ -3,6 +3,9 @@ import  pandas as pd
 import dash
 import dash_bootstrap_components as dbc
 from dash import html, Input, Output, State,dcc
+import tensorflow.python.util.deprecation as deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
+ 
 import joblib
 ss = joblib.load('Scaler')
 from tensorflow.keras.models import load_model
