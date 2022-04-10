@@ -16,7 +16,7 @@ tf.compat.v1.disable_eager_execution()
 graph = tf.compat.v1.get_default_graph()#为了清楚缓存
 sess=backend.get_session()
 
-model2 = load_model('model.h5')
+model2 = load_model('modelnew.h5')
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.FLATLY],suppress_callback_exceptions=True)
 server = app.server
 # 2. Create a Dash app instance
@@ -544,7 +544,7 @@ def input_to_output(n_clicks,age, height, weight, hr, sbp, fpg, hba1c, alt, tg, 
         test2 = pd.DataFrame(test1, columns=test.columns)
         with sess.as_default():
             with graph.as_default():
-                testreslut = model2.predict(test2)
+                testreslut = model2.predict(test2.values)
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
                     return u"【{:.4f}】       suggest:please test".format(re)
@@ -636,7 +636,7 @@ def input_to_output2(n_clicks1,age1, height1, weight1, hr1, sbp1, fpg1, hba1c1, 
         test2 = pd.DataFrame(test1, columns=test.columns)
         with sess.as_default():
             with graph.as_default():
-                testreslut = model2.predict(test2)
+                testreslut = model2.predict(test2.values)
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
                     return u"单纯餐后血糖升高概率:【{:.4f}】       建议进行进一步检测".format(re)
