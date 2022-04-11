@@ -1,1 +1,1 @@
-web: gunicorn iph:server --preload
+web: gunicorn iph:server
