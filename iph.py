@@ -147,7 +147,7 @@ dbc.Row(
         ),
     ],
     className="mb-3",
-),dbc.Button("Caculate", size="lg", n_clicks=0, className="me-1", id="Caculate1")])],
+),dbc.Button("Calculate", size="lg", n_clicks=0, className="me-1", id="Caculate1")])],
                              style={'padding': 10, 'flex': 1}),
                     html.Div(children=
                              [html.H4("Blood index"),
@@ -254,8 +254,8 @@ dbc.Row(
     className="mb-3",
 )])],
                              style={'padding': 10, 'flex': 1})], style={'display': 'flex', 'flex-direction': 'row'})], id="form1"),
-                html.H6("Cut off:【0.07】       "),
-                html.Div(id="output-value2"),
+                html.H6("Cut off:【0.07】       ",style={"margin-left": "200px","margin-right": "200px"}),
+                html.Div(id="output-value2",style={"margin-left": "200px","margin-right": "200px"}),
                 html.Br(),
             ])
     elif tab == 'tab-2-example-graph':
@@ -458,8 +458,8 @@ dbc.Row(
                              style={'padding': 10, 'flex': 1})], style={'display': 'flex', 'flex-direction': 'row'})], id="form1"),
                 html.Br(),
                 html.Br(),
-                html.H6("阈值:【0.07】       "),
-                html.Div(id="output-value3"),
+                html.H6("阈值:【0.07】       ",),
+                html.Div(id="output-value3",),
                 html.Br(),
             ])
 
@@ -547,7 +547,7 @@ def input_to_output(n_clicks,age, height, weight, hr, sbp, fpg, hba1c, alt, tg, 
                 testreslut = model2.predict(test2)
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
-                    return u"【{:.4f}】       suggest:please test".format(re)
+                    return u"【{:.4f}】       Suggest:Please test".format(re)
                 else:
                     return u"【{:.4f}】 ".format(re)
              
