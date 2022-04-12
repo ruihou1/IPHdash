@@ -16,7 +16,7 @@ tf.compat.v1.disable_eager_execution()
 graph = tf.compat.v1.get_default_graph()#为了清楚缓存
 sess=backend.get_session()
 
-model2 = load_model('modelnew.h5')
+model2 = load_model('model.h5')
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.FLATLY],suppress_callback_exceptions=True)
 server = app.server
 # 2. Create a Dash app instance
