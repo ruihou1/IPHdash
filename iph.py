@@ -256,7 +256,7 @@ dbc.Row(
 )])],
                              style={'padding': 10, 'flex': 1})], style={'display': 'flex', 'flex-direction': 'row'})], id="form1"),
                 html.H6("Cut off:【0.07】       ",style={"margin-left": "350px","margin-right": "250px"}),
-                html.Div(id="output-value2",style={"margin-left": "250px","margin-right": "250px"}),
+                html.Div(id="output-value2",style={"margin-left": "250px","margin-right": "50px"}),
                 html.Br(),
             ])
     elif tab == 'tab-2-example-graph':
