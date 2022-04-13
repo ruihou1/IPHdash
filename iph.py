@@ -65,7 +65,7 @@ def Language(tab):
                     [html.H4("Basic information"),
                      dbc.Form(children=[dbc.Row(
     [
-        dbc.Label("Age(years)", html_for="age", width=8),
+        dbc.Label("Age", html_for="age", width=8),
         dbc.Col(children=[
             dbc.Input(
                 type="number",
@@ -135,7 +135,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("Systolic pressure(mmHg)", html_for="SBP", width=8),
+        dbc.Label("Systolic blood pressure(SBP)(mmHg)", html_for="SBP", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -154,7 +154,7 @@ dbc.Row(
                              [html.H4("Blood index"),
                               dbc.Form(children=[dbc.Row(
     [
-        dbc.Label("Fasting plasma glucose(mmol/L)", html_for="FPG", width=9),
+        dbc.Label("Fasting plasma glucose(FPG)(mmol/L)", html_for="FPG", width=9),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -171,7 +171,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("Hemoglobin A1c(%)", html_for="HbA1c", width=9),
+        dbc.Label("Hemoglobin A1c(HbA1c)(%)", html_for="HbA1c", width=9),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -189,7 +189,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("Alanine transaminase(U/L)", html_for="ALT", width=9),
+        dbc.Label("Alanine transaminase(ALT)(U/L)", html_for="ALT", width=9),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -206,7 +206,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("Triglyceride(mmol/L)", html_for="TG", width=9),
+        dbc.Label("Triglyceride(TG)(mmol/L)", html_for="TG", width=9),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -223,7 +223,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("High-density lipoprotein cholesterol(mmol/L)", html_for="HDL", width=9),
+        dbc.Label("High-density lipoprotein cholesterol(HDL-C)(mmol/L)", html_for="HDL", width=9),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -240,7 +240,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("Low-density lipoprotein cholesterol(mmol/L)", html_for="LDL", width=9),
+        dbc.Label("Low-density lipoprotein cholesterol(LDL-C)(mmol/L)", html_for="LDL", width=9),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -267,7 +267,7 @@ dbc.Row(
                     [html.H4("基本信息"),
                      dbc.Form(children=[dbc.Row(
     [
-        dbc.Label("年龄(年)", html_for="age", width=8),
+        dbc.Label("年龄", html_for="age", width=8),
         dbc.Col(children=[
             dbc.Input(
                 type="number",
@@ -286,7 +286,7 @@ dbc.Row(
 )
 , dbc.Row(
     [
-        dbc.Label("身高(厘米)", html_for="Height", width=8),
+        dbc.Label("身高(cm)", html_for="Height", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -303,7 +303,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("体重(千克)", html_for="weight", width=8),
+        dbc.Label("体重(kg)", html_for="weight", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -320,7 +320,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("心率(每秒心跳次数)", html_for="HR", width=8),
+        dbc.Label("心率(bmp)", html_for="HR", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -337,7 +337,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("收缩压(mmHg)", html_for="SBP", width=8),
+        dbc.Label("收缩压(SBP)(mmHg)", html_for="SBP", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -350,13 +350,12 @@ dbc.Row(
         ),
     ],
     className="mb-3",
-), dbc.Button("计算", size="lg", n_clicks=0, className="me-1", id="Caculate2")])],
-                             style={'padding': 10, 'flex': 1}),
+)),
                     html.Div(children=
                              [html.H4("血液指标"),
                               dbc.Form(children=[dbc.Row(
     [
-        dbc.Label("空腹血糖(mmol/L)", html_for="FPG", width=8),
+        dbc.Label("空腹血糖(FPG)(mmol/L)", html_for="FPG", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -373,7 +372,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("糖化血红蛋白(%)", html_for="HbA1c", width=8),
+        dbc.Label("糖化血红蛋白(HbA1c)(%)", html_for="HbA1c", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -391,7 +390,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("谷丙转氨酶(U/L)", html_for="ALT", width=8),
+        dbc.Label("谷丙转氨酶(ALT)(U/L)", html_for="ALT", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -408,7 +407,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("甘油三脂(mmol/L)", html_for="TG", width=8),
+        dbc.Label("甘油三脂(TG)(mmol/L)", html_for="TG", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -425,7 +424,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("高密度脂蛋白(mmol/L)", html_for="HDL", width=8),
+        dbc.Label("高密度脂蛋白(HDL-C)(mmol/L)", html_for="HDL", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -442,7 +441,7 @@ dbc.Row(
 
 dbc.Row(
     [
-        dbc.Label("低密度脂蛋白(mmol/L)", html_for="LDL", width=8),
+        dbc.Label("低密度脂蛋白(LDL-C)(mmol/L)", html_for="LDL", width=8),
         dbc.Col(
             dbc.Input(
                 type="number",
@@ -455,7 +454,8 @@ dbc.Row(
         ),
     ],
     className="mb-3",
-)])],
+)],dbc.Button("计算", size="lg", n_clicks=0, className="me-1", id="Caculate2")])],
+                             style={'padding': 10, 'flex': 1})],
                              style={'padding': 10, 'flex': 1})], style={'display': 'flex', 'flex-direction': 'row'})], id="form1"),
                 html.Br(),
                 html.Br(),
