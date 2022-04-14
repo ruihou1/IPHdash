@@ -350,7 +350,8 @@ dbc.Row(
         ),
     ],
     className="mb-3",
-)])]),
+)])],
+                             style={'padding': 10, 'flex': 1}),
                     html.Div(children=
                              [html.H4("血液指标"),
                               dbc.Form(children=[dbc.Row(
