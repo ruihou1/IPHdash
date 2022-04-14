@@ -260,210 +260,212 @@ dbc.Row(
                 html.Br(),
             ])
     elif tab == 'tab-2-example-graph':
-        return  html.Div(
+        return html.Div(
             [dbc.Container(children=[
                 html.Div(children=[
                     html.Div(children=
-                    [html.H4("基本信息"),
-                     dbc.Form(children=[dbc.Row(
-    [
-        dbc.Label("年龄", html_for="age", width=8),
-        dbc.Col(children=[
-            dbc.Input(
-                type="number",
-                id="age1",
-                placeholder=" ",
-                min=18,
-                max=120
-            ),
-            dbc.FormFeedback(
-                "Please enter a value between 18 and 120",
-                type="invalid")],
-            width=3,
-        ),
-    ],
-    className="mb-3",
-)
-, dbc.Row(
-    [
-        dbc.Label("身高(cm)", html_for="Height", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="height1",
-                placeholder=" ",
-                min=120,
-                max=220
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                             [html.H4("基本信息"),
+                              dbc.Form(children=[dbc.Row(
+                                  [
+                                      dbc.Label("年龄", html_for="age", width=8),
+                                      dbc.Col(children=[
+                                          dbc.Input(
+                                              type="number",
+                                              id="age1",
+                                              placeholder=" ",
+                                              min=18,
+                                              max=120
+                                          ),
+                                          dbc.FormFeedback(
+                                              "Please enter a value between 18 and 120",
+                                              type="invalid")],
+                                          width=3,
+                                      ),
+                                  ],
+                                  className="mb-3",
+                              )
+                                  , dbc.Row(
+                                      [
+                                          dbc.Label("身高(cm)", html_for="Height", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="height1",
+                                                  placeholder=" ",
+                                                  min=120,
+                                                  max=220
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  ),
 
-dbc.Row(
-    [
-        dbc.Label("体重(kg)", html_for="weight", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="weight1",
-                placeholder=" ",
-                min=40,
-                max=200
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("体重(kg)", html_for="weight", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="weight1",
+                                                  placeholder=" ",
+                                                  min=40,
+                                                  max=200
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  ),
 
-dbc.Row(
-    [
-        dbc.Label("心率(bmp)", html_for="HR", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="hr1",
-                placeholder=" ",
-                min=40,
-                max=120
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("心率(bmp)", html_for="HR", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="hr1",
+                                                  placeholder=" ",
+                                                  min=40,
+                                                  max=120
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  ),
 
-dbc.Row(
-    [
-        dbc.Label("收缩压(SBP)(mmHg)", html_for="SBP", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="sbp1",
-                placeholder=" ",
-                min=60,
-                max=160
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-)])],
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("收缩压(SBP)(mmHg)", html_for="SBP", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="sbp1",
+                                                  placeholder=" ",
+                                                  min=60,
+                                                  max=160
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  )])],
                              style={'padding': 10, 'flex': 1}),
                     html.Div(children=
                              [html.H4("血液指标"),
                               dbc.Form(children=[dbc.Row(
-    [
-        dbc.Label("空腹血糖(FPG)(mmol/L)", html_for="FPG", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="fpg1",
-                placeholder=" ",
-                min=4.1,
-                max=15.1
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                                  [
+                                      dbc.Label("空腹血糖(FPG)(mmol/L)", html_for="FPG", width=8),
+                                      dbc.Col(
+                                          dbc.Input(
+                                              type="number",
+                                              id="fpg1",
+                                              placeholder=" ",
+                                              min=4.1,
+                                              max=15.1
+                                          ),
+                                          width=3,
+                                      ),
+                                  ],
+                                  className="mb-3",
+                              ),
 
-dbc.Row(
-    [
-        dbc.Label("糖化血红蛋白(HbA1c)(%)", html_for="HbA1c", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="hba1c1",
-                placeholder=" ",
-                min=3.0,
-                max=10.1
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("糖化血红蛋白(HbA1c)(%)", html_for="HbA1c", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="hba1c1",
+                                                  placeholder=" ",
+                                                  min=3.0,
+                                                  max=10.1
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  ),
 
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("谷丙转氨酶(ALT)(U/L)", html_for="ALT", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="alt1",
+                                                  placeholder=" ",
+                                                  min=0,
+                                                  max=1000
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  ),
 
-dbc.Row(
-    [
-        dbc.Label("谷丙转氨酶(ALT)(U/L)", html_for="ALT", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="alt1",
-                placeholder=" ",
-                min=0,
-                max=1000
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("甘油三脂(TG)(mmol/L)", html_for="TG", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="tg1",
+                                                  placeholder=" ",
+                                                  min=0.1,
+                                                  max=10.1
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  ),
 
-dbc.Row(
-    [
-        dbc.Label("甘油三脂(TG)(mmol/L)", html_for="TG", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="tg1",
-                placeholder=" ",
-                min=0.1,
-                max=10.1
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("高密度脂蛋白(HDL-C)(mmol/L)", html_for="HDL", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="hdl1",
+                                                  placeholder=" ",
+                                                  min=0,
+                                                  max=10
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  ),
 
-dbc.Row(
-    [
-        dbc.Label("高密度脂蛋白(HDL-C)(mmol/L)", html_for="HDL", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="hdl1",
-                placeholder=" ",
-                min=0,
-                max=10
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-),
+                                  dbc.Row(
+                                      [
+                                          dbc.Label("低密度脂蛋白(LDL-C)(mmol/L)", html_for="LDL", width=8),
+                                          dbc.Col(
+                                              dbc.Input(
+                                                  type="number",
+                                                  id="ldl1",
+                                                  placeholder=" ",
+                                                  min=0.1,
+                                                  max=10.1
+                                              ),
+                                              width=3,
+                                          ),
+                                      ],
+                                      className="mb-3",
+                                  )],style={'padding': 10, 'flex': 1})])
 
-dbc.Row(
-    [
-        dbc.Label("低密度脂蛋白(LDL-C)(mmol/L)", html_for="LDL", width=8),
-        dbc.Col(
-            dbc.Input(
-                type="number",
-                id="ldl1",
-                placeholder=" ",
-                min=0.1,
-                max=10.1
-            ),
-            width=3,
-        ),
-    ],
-    className="mb-3",
-)]),dbc.Button("计算", size="lg", n_clicks=0, className="me-1", id="Caculate2")])],
-                             style={'padding': 10, 'flex': 1})],
-                             style={'padding': 10, 'flex': 1})], style={'display': 'flex', 'flex-direction': 'row'})], id="form1"),
-                html.Br(),
-                html.Br(),
-                html.H6("阈值:【0.07】       ",),
-                html.Div(id="output-value3",),
-                html.Br(),
+               ],style={'display': 'flex', 'flex-direction': 'row'},id = "form1"),
+        dbc.Button("计算", size="lg", n_clicks=0, className="me-1", id="Caculate2"),
+        html.Br(),
+        html.Br(),
+        html.H6("阈值:【0.07】       ", ),
+        html.Div(id="output-value3", ),
+        html.Br(),
+        ])
             ])
+
 
 @app.callback(
     Output(component_id='output-value2', component_property='children'),
