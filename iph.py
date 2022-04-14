@@ -455,7 +455,7 @@ dbc.Row(
         ),
     ],
     className="mb-3",
-)],dbc.Button("计算", size="lg", n_clicks=0, className="me-1", id="Caculate2")])],
+)]),dbc.Button("计算", size="lg", n_clicks=0, className="me-1", id="Caculate2")])],
                              style={'padding': 10, 'flex': 1})],
                              style={'padding': 10, 'flex': 1})], style={'display': 'flex', 'flex-direction': 'row'})], id="form1"),
                 html.Br(),
