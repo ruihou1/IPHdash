@@ -148,7 +148,7 @@ dbc.Row(
         ),
     ],
     className="mb-3",
-),dbc.Button("Calculate", size="lg", n_clicks=0, className="me-1", id="Caculate1")])],
+)])],
                              style={'padding': 10, 'flex': 1}),
                     html.Div(children=
                              [html.H4("Blood index"),
@@ -255,8 +255,11 @@ dbc.Row(
     className="mb-3",
 )])],
                              style={'padding': 10, 'flex': 1})], style={'display': 'flex', 'flex-direction': 'row'})], id="form1"),
-                html.H6("Cut off:【0.07】       ",style={"margin-left": "350px","margin-right": "250px"}),
-                html.Div(id="output-value2",style={"margin-left": "250px"}),
+                dbc.Button("Calculate", size="lg", n_clicks=0, className="me-1", id="Caculate1"),
+                html.Br(),
+                html.Br(),
+                html.H6("Cut off:【0.07】       "),
+                html.Div(id="output-value2"),
                 html.Br(),
             ])
     elif tab == 'tab-2-example-graph':
