@@ -646,7 +646,7 @@ def input_to_output2(n_clicks1,age1, height1, weight1, hr1, sbp1, fpg1, hba1c1, 
                 testreslut = model2.predict(test2)
                 re = round(testreslut[0, 0], 4)
                 if re>=0.07:
-                    return u"单纯餐后血糖升高概率:【{:.4f}】       建议进一步检测餐后血糖".format(re)
+                    return u"单纯餐后血糖升高概率:【{:.4f}】       进一步检测餐后血糖".format(re)
                 else:
                     return u"单纯餐后血糖升高概率:【{:.4f}】 ".format(re)
 
